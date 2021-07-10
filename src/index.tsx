@@ -58,18 +58,6 @@ class Square extends React.Component<SProps, {}> {
 }
 
 class Board extends React.Component<IProps, BState> {
-  // handleClick(i: number) {
-  //   const squares = this.state.squares.slice();
-  //   if (checkWinner(this.state.squares) || squares[i].length > 0) {
-  //     return;
-  //   }
-  //   squares[i] = this.state.xIsNext ? 'x' : 'o';
-  //   this.setState({
-  //     squares: squares,
-  //     xIsNext: !this.state.xIsNext,
-  //   });
-  // }
-
   renderSquare(i: number) {
     return <Square
       value={this.props.squares[i]}
@@ -78,13 +66,6 @@ class Board extends React.Component<IProps, BState> {
   }
 
   render() {
-    // const winner = checkWinner(this.props.squares);
-    // let status: string = '';
-    // if (winner) {
-    //   status = 'Winner: ' + winner;
-    // } else {
-    //   status = 'Next player: ' + (this.state.xIsNext ? 'x' : 'o');
-    // }
     return (
       <div>
         <div className="board-row">
