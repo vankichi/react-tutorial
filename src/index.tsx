@@ -129,7 +129,7 @@ class Game extends React.Component<{}, GState> {
     const current = history[this.state.step];
     const winner = checkWinner(current.squares);
 
-    const move = history.map((step, move) => {
+    const move = history.map((_, move) => {
       const desc = move ?
         'Go to move #' + move :
         'Go to game start';
